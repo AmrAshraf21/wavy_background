@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+font-family: 'Courier New', Courier, monospace;
+}
+.page{
+    height: 100vh;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(106, 92, 92, 0.152);
+    text-align: center;
+    border-radius: 20px;
+}
+.container img{
+    min-width: 100%;
+    border-radius: 20px;
+}
+
+
+.page::before{
+
+    content:'';
+    position: fixed;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(119, 0, 255, 0.216);
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%)  skew(0 , -10deg);
+    z-index: -1;
+    border-radius:50% ;
+    animation: wavy 5s ease-in-out infinite alternate-reverse;
+}
+@keyframes wavy {
+    from{
+        transform: translateX(-50%)  skew(0 , -10deg);
+
+    }
+    to{
+        transform: translateX(-30%)  skew(10deg , 0);
+
+    }
+    
+}
